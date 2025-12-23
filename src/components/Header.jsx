@@ -10,7 +10,7 @@ export const Header = () => {
    
    
    <Link href="/" className="text-white text-2xl sm:text-3xl md:text-4xl tracking-wider" style={{fontFamily: "'Great Vibes', cursive"}}>
-   <h1 className="text-white text-2xl sm:text-3xl md:text-4xl tracking-wider" style={{fontFamily: "'Great Vibes', cursive"}}>Happy Christmas</h1>
+   <h1 className="text-white text-2xl sm:text-3xl md:text-4xl tracking-wider" style={{fontFamily: "'Great Vibes', cursive"}}>Merry Christmas</h1>
    </Link>
    </div>
 <div className=" mr-[100px]">
