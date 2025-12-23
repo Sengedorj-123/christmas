@@ -3,6 +3,7 @@ import Head from "next/head";
  import { Header } from "@/components/Header";
 import { Snowfall } from "@/components/Snow";
 import { ChristmasBox } from "@/components/Box";
+import { Music } from "@/components/Music";
 export default function page() {
   return (
     <> 
@@ -17,6 +18,7 @@ export default function page() {
         <Snowfall />
         <Header />
         <ChristmasBox />
+        <Music />
       </div>
     </>
   );
