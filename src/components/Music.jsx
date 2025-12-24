@@ -1,4 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
+import { Next } from "./Next";
+import { Back } from "./Back";
 
 export const Music = () => {
   const [isPlaying, setIsPlaying] = useState(false);
@@ -83,7 +85,7 @@ export const Music = () => {
   };
 
   return (
-    <div className="fixed top-[calc(50%+220px)] sm:top-[calc(50%+240px)] md:top-[calc(50%+260px)] lg:top-[calc(50%+280px)] left-1/2 -translate-x-1/2 z-50 pointer-events-auto">
+    <div className="fixed top-[calc(50%+2200px)] sm:top-[calc(50%+240px)] md:top-[calc(50%+260px)] lg:top-[calc(50%+280px)] left-1/2 -translate-x-1/2 z-50 pointer-events-auto">
       <audio
         ref={audioRef}
         loop
@@ -188,6 +190,10 @@ export const Music = () => {
           <br />
         </div>
       </div>
+   <div className="flex mt-[2400px]">
+   <Next/>
+   <Back/>
+   </div>
     </div>
   );
 };

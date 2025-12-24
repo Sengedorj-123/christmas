@@ -1,0 +1,73 @@
+.minimalistTreeContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  z-index: 10;
+}
+
+.minimalistTreeSvg {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  max-height: 90vh;
+}
+
+.treeOutline {
+  animation: fadeIn 1s ease-in;
+}
+
+.starGroup {
+  animation: starAppear 1.2s ease-out;
+  transform-origin: 200px 52.5px;
+}
+
+.starFill {
+  filter: drop-shadow(0 0 2px rgba(212, 165, 116, 0.5));
+}
+
+.starOutline {
+  filter: drop-shadow(0 0 1px rgba(255, 255, 255, 0.8));
+}
+
+.treeBase {
+  animation: fadeIn 1.5s ease-in;
+}
+
+.treeTrunk {
+  animation: fadeIn 1.5s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes starAppear {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .minimalistTreeSvg {
+    max-width: 90%;
+    padding: 20px;
+  }
+}
+

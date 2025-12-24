@@ -2,6 +2,7 @@ import Head from "next/head";
 import { Header } from "@/components/Header";
 import { Snowfall } from "@/components/Snow";
 import { Moon } from "@/components/Moon";
+import { SpecialGift } from "@/components/SpecialGift";
 import { Mountains } from "@/components/Mountains";
 import { Santa } from "@/components/Santa";
 import { BackgroundMusic } from "@/components/BackgroundMusic";
@@ -26,7 +27,10 @@ export default function HomePage() {
         <Snowfall />
         
        
-       
+        
+        
+        {/* Special Gift Text */}
+        <SpecialGift />
         
         {/* Moon */}
         <Moon />

@@ -1,4 +1,7 @@
 import { useState, useMemo } from "react";
+import Link from "next/link";
+import { Next } from "./Next";
+import { Back } from "./Back";
 
 export const messages = [
   "Шинэ жилийн гэрэл аажмаар зүрхийг чинь дулаацуулна, чи ганцаараа биш.",
@@ -36,7 +39,7 @@ function getRandomMessage() {
   return messages[randomIndex];
 }
 
-export const ChristmasBox = () => {
+export const ChristmasBox = ({ onOpen }) => {
   const [opened, setOpened] = useState(false);
   const [message, setMessage] = useState("");
   const [isAnimating, setIsAnimating] = useState(false);
@@ -61,6 +64,10 @@ export const ChristmasBox = () => {
       setMessage(getRandomMessage());
       setOpened(true);
       setIsAnimating(false);
+      // Trigger fireworks when box opens
+      if (onOpen) {
+        onOpen();
+      }
     }, 1000);
   };
 
@@ -72,6 +79,7 @@ export const ChristmasBox = () => {
   return (
    <div className="relative z-10 flex items-center justify-center min-h-screen p-4">
       <div className="w-full max-w-5xl">
+    
         {/* Title Section */}
         <div className="text-center transition-all duration-700 mb-8">
           <div className={`${opened ? 'opacity-0 h-0 overflow-hidden' : 'opacity-100'} transition-all duration-700`}>
@@ -265,11 +273,20 @@ export const ChristmasBox = () => {
                     </span>
                   ))}
                 </div>
+               
               </div>
+          
             </div>
           </div>
         </div>
+           
+       <div className="flex w-full justify-between">
+   
+   <Back/>
+<Next/>
+   </div>
       </div>
+      
     </div>
   );
 }

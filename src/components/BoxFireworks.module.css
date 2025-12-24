@@ -1,0 +1,35 @@
+.centerBurst {
+  animation: firework-center 0.5s ease-out forwards;
+}
+
+.particle {
+  animation: firework-explode 1.5s ease-out forwards;
+  transform-origin: center;
+}
+
+@keyframes firework-center {
+  0% {
+    transform: scale(0);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(2);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(3);
+    opacity: 0;
+  }
+}
+
+@keyframes firework-explode {
+  0% {
+    transform: translate(-50%, -50%) translate(0, 0) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, -50%) translate(var(--x), var(--y)) scale(0);
+    opacity: 0;
+  }
+}
+
