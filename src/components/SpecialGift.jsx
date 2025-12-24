@@ -26,9 +26,9 @@ export const SpecialGift = () => {
         </div>
         
         <Link href="/special" className="pointer-events-auto cursor-pointer">
-          <div className="text-center">
+          <div className="text-center ">
             <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold gradient-text animate-fadeIn hover:opacity-80 transition-opacity" style={{fontFamily: "'Great Vibes', cursive"}}>
-             --Special Gift--
+             -Special Gift-
             </h2>
           </div>
         </Link>
