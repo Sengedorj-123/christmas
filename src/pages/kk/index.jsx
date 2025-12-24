@@ -5,6 +5,7 @@ import { MinimalistTree } from "@/components/MinimalistTree";
 import { GiftQuestion } from "@/components/GiftQuestion";
 import styles from "./index.module.css";
 import { Next } from "@/components/Next";
+import { Song } from "@/components/Song";
 
 export default function page() {
   return (
@@ -21,7 +22,7 @@ export default function page() {
           ← Back
         </Link>
         <GiftQuestion />
-     
+     <Song/>
       </div>
     </>
   );
