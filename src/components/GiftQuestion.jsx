@@ -1,4 +1,6 @@
 import { useState, useRef } from "react";
+import { useRouter } from "next/router";
+
 
 const NO_IMAGES = [
   "/no/200.gif",
@@ -18,6 +20,8 @@ export const GiftQuestion=()=> {
   const [noButtonPosition, setNoButtonPosition] = useState({ x: 0, y: 0 });
   const [isPositioned, setIsPositioned] = useState(false);
   const [noHoverCount, setNoHoverCount] = useState(0);
+  const router = useRouter();
+
 
   const handleYes = () => {
     setResponse("yes");
@@ -78,13 +82,23 @@ export const GiftQuestion=()=> {
               />
             </div>
             {response === "no" && (
-              <button 
-                onClick={handleBackToQuestion}
-                className="mt-4 sm:mt-6 w-full py-4 sm:py-5 px-6 bg-slate-800 hover:bg-slate-700 text-white text-xl sm:text-2xl font-bold rounded-xl sm:rounded-2xl transition-all duration-300 transform hover:scale-105 hover:shadow-xl"
-              >
-                Try Again?
-              </button>
-            )}
+  <button 
+    onClick={handleBackToQuestion}
+    className="mt-4 sm:mt-6 w-full py-4 sm:py-5 px-6 bg-slate-800 hover:bg-slate-700 text-white text-xl sm:text-2xl font-bold rounded-xl sm:rounded-2xl transition-all duration-300 transform hover:scale-105 hover:shadow-xl"
+  >
+    Try Again?
+  </button>
+)}
+
+{response === "yes" && (
+  <button
+    onClick={() => router.push("/")}
+    className="mt-4 sm:mt-6 w-full py-4 sm:py-5 px-6 bg-white hover:bg-slate-200 text-slate-950 text-xl sm:text-2xl font-bold rounded-xl sm:rounded-2xl transition-all duration-300 transform hover:scale-105 hover:shadow-xl"
+  >
+    Back to Home
+  </button>
+)}
+
           </div>
         </div>
       </div>
